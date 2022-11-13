@@ -24,7 +24,28 @@ class StoreEmployessRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'first_name' => [
+                'string',
+                'nullable',
+            ],
+            'last_name' => [
+                'string',
+                'nullable',
+            ],
+            'phone' => [
+                'string',
+                'nullable',
+            ],
+            'email' => [
+                'string',
+                'nullable',
+            ],
+            'services.*' => [
+                'integer',
+            ],
+            'services' => [
+                'array',
+            ],
         ];
     }
 }

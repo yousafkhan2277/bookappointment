@@ -7,6 +7,8 @@ use App\Http\Controllers\AppointmentsController;
 use App\Http\Controllers\EmployessController;
 use App\Http\Controllers\ServiceResource;
 use App\Http\Controllers\WorkingtimeController;
+use App\Http\Controllers\DayController;
+
 
 
 /*
@@ -35,6 +37,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
     // Workinghour
     Route::apiResource('workingtime', WorkingtimeController::class);
+
+    // Working day
+    Route::apiResource('workingday', DayController::class);
 
     // Appointments
     Route::apiResource('appointments', AppointmentsController::class);

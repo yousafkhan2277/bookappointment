@@ -24,7 +24,8 @@ class DestroyServiceRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'ids'   => 'required|array',
+            'ids.*' => 'exists:services,id',
         ];
     }
 }
